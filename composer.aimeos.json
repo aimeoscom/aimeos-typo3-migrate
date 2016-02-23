@@ -1,0 +1,26 @@
+{
+	"name": "Aimeos TYPO3 migration extension",
+	"description": "Migrates data from other shop systems into the Aimeos tables",
+	"homepage": "https://github.com/aimeos/aimeos/aimeos-typo3-migrate",
+	"license": "GPL-3.0",
+	"keywords": ["commerce", "shop", "migration"],
+	"support": {
+		"source": "https://github.com/aimeos/aimeos-typo3-migrate"
+	},
+	"type": "metapackage",
+	"prefer-stable": true,
+	"minimum-stability": "dev",
+	"require": {
+		"php": ">=5.3.3",
+		"composer/installers": "~1.0",
+		"aimeos/ai-migrate-txcommerce": "dev-master"
+	},
+	"config": {
+		"vendor-dir": "Resources/Libraries"
+	},
+	"extra": {
+		"installer-paths": {
+			"Resources/Private/Extensions/{$name}/": ["type:aimeos-extension"]
+		}
+	}
+}
